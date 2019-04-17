@@ -1,10 +1,12 @@
 # ipinfo-analyzers
 
-Cortex Analyzer for IPinfo.
+Cortex analyzers for IPinfo.
 
 ## Supported API endpoints
 
-### Details (ipinfo.io/{IP})
+### Details (`ipinfo.io/{IP}`)
+
+![image](/screenshots/details.png)
 
 ```bash
 $ echo '{ "data": "66.87.125.72", "dataType":"ip", "config":{ "api_key":"YOUR_API_KEY", "service":"details" }}' | python ipinfo_analyzer.py | jq .
@@ -74,7 +76,9 @@ $ echo '{ "data": "66.87.125.72", "dataType":"ip", "config":{ "api_key":"YOUR_AP
 }
 ```
 
-### Hosted domains (ipinfo.io/domains/{IP})
+### Hosted domains (`ipinfo.io/domains/{IP}`)
+
+![image](/screenshots/hosted_domains.png)
 
 ```bash
 $ echo '{ "data": "216.239.34.21", "dataType":"ip", "config":{ "api_key":"YOUR_API_KEY", "service":"hosted_domains" }}' | python ipinfo_analyzer.py | jq .
